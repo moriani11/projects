@@ -1,0 +1,140 @@
+/* Homepage Styles */
+.homepage {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem; /* mobile-first padding */
+    margin-bottom: 3rem;
+    background-color: var(--dark-gray);
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 2.2rem; /* mobile-first */
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem; 
+    line-height: 1.6;
+}
+
+/* CTA Button */
+.cta-button {
+    padding: 1rem 2rem;
+    background-color: var(--gold);
+    color: var(--black);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    border: 2px solid var(--gold);
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: var(--gold);
+}
+
+/* Featured Products */
+.featured-products {
+    margin-top: 4rem;
+}
+
+.featured-products h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* mobile-first: één kolom */
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.product-card {
+    position: relative;
+    height: 300px; /* mobile-first */
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.audi-rs6 {
+    background-image: url('../assets/audi-rs6/voorkant.jpg');  
+}
+
+.mercedes-gt63s {
+    background-image: url('../assets/mercedes-amg-gt63-s/gt63svoorkant.jpg');
+}
+
+.lamborghini-urus {
+    background-image: url('../assets/lamborghini-urus/urusvoor.jpg');
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+} 
+
+.product-info {
+    position: relative; /* nog extra bekijken*/
+    color: white;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.product-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.product-info p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Grotere schermen */
+@media (min-width: 769px) {
+    .hero {
+        padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .product-card {
+        height: 400px;
+    }
+}
