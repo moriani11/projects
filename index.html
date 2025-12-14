@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
+
 <body>
     <header class="main-header">
         <div class="logo">
@@ -15,7 +17,7 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li id = "index"><a href="index.html">Home</a></li>
+                <li id="index"><a href="index.html">Home</a></li>
                 <li id="shop" class="dropdown">
                     <a href="shop.html">Shop</a>
                     <div class="dropdown-content">
@@ -27,45 +29,63 @@
                         <a href="autos/lamborghini-urus.html">Lamborghini Urus</a>
                     </div>
                 </li>
-                <li id = "contact"><a href="contact.html">Contact</a></li>
+                <li id="contact"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div class="search-container">
+        <input type="text" placeholder="">
+        <button type="submit">🔍</button>
+    </div>
     </header>
 
-    <main class="homepage">
-        <section class="hero">
-            <h1>Luxe Rijders</h1>
-            <p>Welkom bij Luxe Rijders, uw bestemming voor exclusieve premium auto's. Wij bieden een zorgvuldig geselecteerd aanbod van de meest gewilde luxe voertuigen, van krachtige Duitse sportwagens tot verfijnde Italiaanse meesterwerken.</p>
+  <main class="homepage">
+    
+    <section class="left-column">
+        <div class="intro-text">
+            <h1>Luxe Auto’s voor Exclusieve Rijervaringen</h1>
+            <p>Ontdek onze zorgvuldig geselecteerde collectie premium voertuigen en rijd in stijl en comfort.</p>
             <a href="shop.html" class="cta-button">Bekijk Ons Aanbod</a>
-        </section>
+        </div>
 
-        <section class="featured-products">
-            <h2>Onze Best Verkochte Modellen</h2>
-            <div class="product-grid">
-                <article class="product-card audi-rs6">
-                    <div class="product-info">
-                        <h3>Audi RS6</h3>
-                        <p>De ultieme combinatie van gezinsauto en supersportwagen.</p>
-                    </div>
-                </article>
-                <article class="product-card mercedes-gt63s">
-                    <div class="product-info">
-                        <h3>Mercedes-AMG GT 63 S</h3>
-                        <p>Puur design, krachtige prestaties en ultiem comfort in één.</p>
-                    </div>
-                </article>
-                <article class="product-card lamborghini-urus">
-                    <div class="product-info">
-                        <h3>Lamborghini Urus</h3>
-                        <p>De allereerste Super Sport Utility Vehicle in zijn soort.</p>
-                    </div>
-                </article>
+        <div class="about-me">
+            <img src="assets/logo/image.png" alt="Eigenaar" class="owner-img"> 
+            <div class="about-content">
+                <p>Ik ben <strong>Mohamed Riani</strong>, trotse autohandelaar. Met mijn ervaring selecteer ik persoonlijk alleen de meest exclusieve en luxe voertuigen voor mijn klanten.</p>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section class="right-column">
+        <div class="product-grid">
+            <article class="product-card audi-rs6 big-card">
+                <div class="product-info">
+                    <h3>Audi RS6</h3>
+                    <div class="details"><span>Station</span><span class="price">109k</span></div>
+                </div>
+            </article>
+
+            <article class="product-card mercedes-gt63s">
+                <div class="product-info">
+                    <h3>AMG GT 63 S</h3>
+                    <div class="details"><span>Coupe</span><span class="price">169k</span></div>
+                </div>
+            </article>
+
+            <article class="product-card lamborghini-urus">
+                <div class="product-info">
+                    <h3>Lambo Urus</h3>
+                    <div class="details"><span>SUV</span><span class="price">239k</span></div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+</main>
+
 
     <footer>
         <p>&copy; 2025 Luxe Rijders - Premium Autohandel</p>
     </footer>
 </body>
+
 </html>

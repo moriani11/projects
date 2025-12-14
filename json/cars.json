@@ -1,0 +1,86 @@
+[
+  {
+    "id": "rs6",
+    "name": "Audi RS6",
+    "price": 109000,
+    "amount": 4,
+    "description": "De Audi RS6 is de perfecte combinatie van brute kracht en dagelijks comfort. Met zijn imposante uitstraling, high-tech interieur en overweldigende prestaties is deze wagen ideaal voor wie sportiviteit wil zonder in te leveren op luxe en gebruiksgemak.",
+    "specs": {
+      "motor": "4.0 liter V8 bi-turbo motor",
+      "vermogen": "600 pk",
+      "acceleratie": "3,6 seconden",
+      "aandrijving": "Quattro vierwielaandrijving",
+      "interieur": "Ruim interieur met sportieve afwerking"
+    }
+  },
+  {
+    "id": "rsq8",
+    "name": "Audi RS Q8",
+    "price": 124000,
+    "amount": 3,
+    "description": "Krachtige SUV met sportieve uitstraling en ruim interieur. Perfect voor wie ruimte wil combineren met hoge prestaties.",
+    "specs": {
+      "motor": "4.0 liter V8 bi-turbo motor",
+      "vermogen": "600 pk",
+      "acceleratie": "3,8 seconden",
+      "aandrijving": "Quattro vierwielaandrijving",
+      "interieur": "Ruim interieur met luxe afwerking"
+    }
+  },
+  {
+    "id": "bmw-m3",
+    "name": "BMW M3",
+    "price": 99000,
+    "amount": 6,
+    "description": "Sportieve sedan met uitzonderlijke rijeigenschappen. De M3 combineert precisie, kracht en dynamiek in een tijdloos design.",
+    "specs": {
+      "motor": "3.0 liter TwinTurbo",
+      "vermogen": "480 pk",
+      "acceleratie": "4,1 seconden",
+      "aandrijving": "Achterwielaandrijving",
+      "interieur": "Sportief en high-tech"
+    }
+  },
+  {
+    "id": "bmw-m5cs",
+    "name": "BMW M5 CS",
+    "price": 159000,
+    "amount": 2,
+    "description": "Het meest krachtige en lichte M5 model ooit. Met zijn 635 pk en 750 Nm koppel is dit het toppunt van Duitse autobouw.",
+    "specs": {
+      "motor": "4.4 liter V8 TwinTurbo",
+      "vermogen": "635 pk",
+      "acceleratie": "3,0 seconden",
+      "aandrijving": "Achterwielaandrijving",
+      "interieur": "Luxe sportinterieur"
+    }
+  },
+  {
+    "id": "gt63s",
+    "name": "Mercedes-AMG GT 63 S",
+    "price": 169000,
+    "amount": 3,
+    "description": "Puur design, krachtige prestaties en ultiem comfort in één. De GT 63 S is het toonbeeld van luxe en sportiviteit.",
+    "specs": {
+      "motor": "4.0 liter V8 bi-turbo",
+      "vermogen": "639 pk",
+      "acceleratie": "3,2 seconden",
+      "aandrijving": "4MATIC+",
+      "interieur": "Luxe en sportief interieur"
+    }
+  },
+  {
+    "id": "urus",
+    "name": "Lamborghini Urus",
+    "price": 239000,
+    "amount": 1,
+    "description": "De allereerste Super Sport Utility Vehicle in zijn soort. Een combinatie van ongekende prestaties en veelzijdigheid.",
+    "specs": {
+      "motor": "4.0 liter V8 TwinTurbo",
+      "vermogen": "650 pk",
+      "acceleratie": "3,6 seconden",
+      "aandrijving": "All-wheel drive",
+      "interieur": "Luxe en sportief"
+    }
+  }
+]

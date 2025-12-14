@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop - Auto's</title>
+    <title>Home - Luxerijders</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/shop.css">  
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/products.js"></script>
+
 </head>
+
 <body>
     <header class="main-header">
         <div class="logo">
@@ -30,89 +37,132 @@
                 <li id="contact"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div class="search-container">
+            <input type="text" placeholder="">
+            <button type="submit">🔍</button>
+        </div>
     </header>
 
     <main class="shop-page">
         <div class="shop-container">
+
             <section class="products">
                 <h1>Ons aanbod</h1>
                 <div class="product-list">
+                    <!--
                     <article class="product-card">
-                        <div class="product-image" style="background-image: url('assets/audi-rs6/voorkant.jpg');"></div>
+                        <div class="product-image audi-rs6">
+                            <button class="btn-wishlist-icon" data-name="Audi RS6" data-price="109000">❤️</button>
+                            <button class="btn-cart-icon" data-name="Audi RS6" data-price="109000">🛒</button>
+                        </div>
                         <div class="product-details">
                             <h3>Audi RS6</h3>
+                            <p class="price">€ 109.000</p>
                             <p>De ultieme combinatie van gezinsauto en supersportwagen. Met zijn 600 pk en 800 Nm koppel biedt deze auto een ongeëvenaarde rijervaring.</p>
-                            <button class="add-to-cart">Toevoegen aan winkelwagen</button>
                         </div>
                     </article>
 
                     <article class="product-card">
-                        <div class="product-image" style="background-image: url('assets/audi-rsq8/rsq8voor.png');"></div>
+                        <div class="product-image audi-rsq8">
+                            <button class="btn-wishlist-icon" data-name="Audi RS Q8" data-price="124000">❤️</button>
+                            <button class="btn-cart-icon" data-name="Audi RS Q8" data-price="124000">🛒</button>
+                        </div>
                         <div class="product-details">
                             <h3>Audi RS Q8</h3>
+                            <p class="price">€ 124.000</p>
                             <p>Krachtige SUV met sportieve uitstraling en ruim interieur. Perfect voor wie ruimte wil combineren met hoge prestaties.</p>
-                            <button class="add-to-cart">Toevoegen aan winkelwagen</button>
                         </div>
                     </article>
 
                     <article class="product-card">
-                        <div class="product-image" style="background-image: url('assets/bmw-m3/m3voorkant.avif');"></div>
+                        <div class="product-image bmw-m3">
+                            <button class="btn-wishlist-icon" data-name="BMW M3" data-price="99000">❤️</button>
+                            <button class="btn-cart-icon" data-name="BMW M3" data-price="99000">🛒</button>
+                        </div>
                         <div class="product-details">
                             <h3>BMW M3</h3>
+                            <p class="price">€ 99.000</p>
                             <p>Sportieve sedan met uitzonderlijke rijeigenschappen. De M3 combineert precisie, kracht en dynamiek in een tijdloos design.</p>
-                            <button class="add-to-cart">Toevoegen aan winkelwagen</button>
                         </div>
                     </article>
 
                     <article class="product-card">
-                        <div class="product-image" style="background-image: url('assets/bmw-m5-cs/m5csvoor.jpg');"></div>
+                        <div class="product-image bmw-m5cs">
+                            <button class="btn-wishlist-icon" data-name="BMW M5 CS" data-price="159000">❤️</button>
+                            <button class="btn-cart-icon" data-name="BMW M5 CS" data-price="159000">🛒</button>
+                        </div>
                         <div class="product-details">
                             <h3>BMW M5 CS</h3>
+                            <p class="price">€ 159.000</p>
                             <p>Het meest krachtige en lichte M5 model ooit. Met zijn 635 pk en 750 Nm koppel is dit het toppunt van Duitse autobouw.</p>
-                            <button class="add-to-cart">Toevoegen aan winkelwagen</button>
                         </div>
                     </article>
 
                     <article class="product-card">
-                        <div class="product-image" style="background-image: url('assets/mercedes-amg-gt63-s/gt63svoorkant.jpg');"></div>
+                        <div class="product-image mercedes-gt63s">
+                            <button class="btn-wishlist-icon" data-name="Mercedes-AMG GT 63 S" data-price="169000">❤️</button>
+                            <button class="btn-cart-icon" data-name="Mercedes-AMG GT 63 S" data-price="169000">🛒</button>
+                        </div>
                         <div class="product-details">
                             <h3>Mercedes-AMG GT 63 S</h3>
+                            <p class="price">€ 169.000</p>
                             <p>Puur design, krachtige prestaties en ultiem comfort in één. De GT 63 S is het toonbeeld van luxe en sportiviteit.</p>
-                            <button class="add-to-cart">Toevoegen aan winkelwagen</button>
                         </div>
                     </article>
 
                     <article class="product-card">
-                        <div class="product-image" style="background-image: url('assets/lamborghini-urus/urusvoor.jpg');"></div>
+                        <div class="product-image lamborghini-urus">
+                            <button class="btn-wishlist-icon" data-name="Lamborghini Urus" data-price="239000">❤️</button>
+                            <button class="btn-cart-icon" data-name="Lamborghini Urus" data-price="239000">🛒</button>
+                        </div>
                         <div class="product-details">
                             <h3>Lamborghini Urus</h3>
+                            <p class="price">€ 239.000</p>
                             <p>De allereerste Super Sport Utility Vehicle in zijn soort. Een combinatie van ongekende prestaties en veelzijdigheid.</p>
-                            <button class="add-to-cart">Toevoegen aan winkelwagen</button>
                         </div>
                     </article>
+                    -->
                 </div>
             </section>
 
             <aside class="shop-sidebar">
+
                 <div class="wishlist">
-                    <h2>Verlanglijstje</h2>
+                    <h2>Verlanglijstje❤️</h2>
                     <div class="wishlist-content">
-                        <p>Nog geen items toegevoegd aan je verlanglijstje</p>
+                        <table class="wishlist-table">
+                            <tbody id="wishlist-items"></tbody>
+                        </table>
+                        <div class="wishlist-totals">
+                            <p>Totaal: € <span id="wishlist-total">0.00</span></p>
+                            <p>Aantal: <span id="wishlist-count">0</span></p>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="shopping-cart">
-                    <h2>Winkelwagen</h2>
+                    <h2>Winkelwagen🛒</h2>
                     <div class="cart-content">
-                        <p>Je winkelwagen is leeg</p>
+                        <table class="cart-table">
+                            <tbody id="cart-items"></tbody>
+                        </table>
+
+                        <div class="cart-totals">
+                            <p>Totaal: € <span id="cart-total">0.00</span></p>
+                            <p>Aantal: <span id="cart-count">0</span></p>
+                        </div>
                     </div>
                 </div>
+
             </aside>
+
         </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Luxe Rijders - Premium Autohandel</p>
     </footer>
+
 </body>
+
 </html>

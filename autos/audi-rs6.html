@@ -1,96 +1,122 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Audi RS6 - Auto's</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/product.css">
-</head>
-<body>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+     <script src="../js/data.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/wishlist.js"></script>
+    <script src="../js/products.js"></script>
+  </head>
+
+  <body>
     <header class="main-header">
-        <div class="logo">
-            <img src="../assets/logo/image.png" alt="AutoShop Logo">
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li id="index"><a href="../index.html">Home</a></li>
-                <li id="shop" class="dropdown">
-                    <a href="../shop.html">Shop</a>
-                    <div class="dropdown-content">
-                        <a href="audi-rs6.html">Audi RS6</a>
-                        <a href="audi-rsq8.html">Audi RS Q8</a>
-                        <a href="bmw-m3.html">BMW M3</a>
-                        <a href="bmw-m5cs.html">BMW M5 CS</a>
-                        <a href="mercedes-gt63s.html">Mercedes-AMG GT 63 S</a>
-                        <a href="lamborghini-urus.html">Lamborghini Urus</a>
-                    </div>
-                </li>
-                <li id="contact"><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <img src="../assets/logo/image.png" alt="AutoShop Logo" />
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li id="index"><a href="../index.html">Home</a></li>
+          <li id="shop" class="dropdown">
+            <a href="../shop.html">Shop</a>
+            <div class="dropdown-content">
+              <a href="audi-rs6.html">Audi RS6</a>
+              <a href="audi-rsq8.html">Audi RS Q8</a>
+              <a href="bmw-m3.html">BMW M3</a>
+              <a href="bmw-m5cs.html">BMW M5 CS</a>
+              <a href="mercedes-gt63s.html">Mercedes-AMG GT 63 S</a>
+              <a href="lamborghini-urus.html">Lamborghini Urus</a>
+            </div>
+          </li>
+          <li id="contact"><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="search-container">
+        <input type="text" placeholder="" />
+        <button type="submit">🔍</button>
+      </div>
     </header>
 
     <main class="product-detail">
-        <div class="product-hero">
-            <div class="product-image-container">
-                <figure>
-                    <img src="../assets/audi-rs6/voorkant.jpg" alt="Audi RS6 Voorkant">
-                    <figcaption>Bron: Audi Official Photography - Voorkant</figcaption>
-                </figure>
-                <figure>
-                    <img src="../assets/audi-rs6/achterkant.jpg" alt="Audi RS6 Achterkant">
-                    <figcaption>Bron: Audi Official Photography - Achterkant</figcaption>
-                </figure>
-                <figure>
-                    <img src="../assets/audi-rs6/interieur.jpg" alt="Audi RS6 Interieur">
-                    <figcaption>Bron: Audi Official Photography - Interieur</figcaption>
-                </figure>
-            </div>
+         <a href="../shop.html" class="btn-back">← Terug naar winkel</a>
+      <div class="product-hero">
+        <!-- FOTO'S -->
+        <div class="product-image-container">
+          <figure>
+            <img src="../assets/audi-rs6/voorkant.jpg" alt="Audi RS6 Voorkant" />
+            <figcaption>Bron: Audi Official Photography - Voorkant</figcaption>
+          </figure>
 
-            <div class="product-info">
-                <h1>Audi RS6</h1>
-                <p class="product-description">
-                    De Audi RS6 is de perfecte combinatie van brute kracht en dagelijks comfort. Met zijn imposante uitstraling, high-tech interieur en overweldigende prestaties is deze wagen ideaal voor wie sportiviteit wil zonder in te leveren op luxe en gebruiksgemak.
-                </p>
+          <figure>
+            <img src="../assets/audi-rs6/achterkant.jpg" alt="Audi RS6 Achterkant" />
+            <figcaption>Bron: Audi Official Photography - Achterkant</figcaption>
+          </figure>
 
-                <div class="specifications">
-                    <h2>Technische Specificaties</h2>
-                    <ul>
-                        <li>
-                            <span class="spec-label">Motor</span>
-                            <span class="spec-value">4.0 liter V8 bi-turbo motor</span>
-                        </li>
-                        <li>
-                            <span class="spec-label">Vermogen</span>
-                            <span class="spec-value">600 pk</span>
-                        </li>
-                        <li>
-                            <span class="spec-label">Acceleratie 0-100</span>
-                            <span class="spec-value">3,6 seconden</span>
-                        </li>
-                        <li>
-                            <span class="spec-label">Aandrijving</span>
-                            <span class="spec-value">Quattro vierwielaandrijving</span>
-                        </li>
-                        <li>
-                            <span class="spec-label">Interieur</span>
-                            <span class="spec-value">Ruim interieur met sportieve afwerking</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="product-actions">
-                    <button class="btn-wishlist">❤️ Toevoegen aan verlanglijstje</button>
-                    <a href="../shop.html" class="btn-back">← Terug naar winkel</a>
-                </div>
-            </div>
+          <figure>
+            <img src="../assets/audi-rs6/interieur.jpg" alt="Audi RS6 Interieur" />
+            <figcaption>Bron: Audi Official Photography - Interieur</figcaption>
+          </figure>
         </div>
+
+        <!-- PRODUCT INFO -->
+        <div class="product-info">
+          <h1>Audi RS6</h1>
+          <p class="product-price">Vanaf € 109.000</p>
+
+          <p class="product-description">
+            De Audi RS6 is de perfecte combinatie van brute kracht en dagelijks comfort.
+            Met zijn imposante uitstraling, high-tech interieur en overweldigende
+            prestaties is deze wagen ideaal voor wie sportiviteit wil zonder in te leveren
+            op luxe en gebruiksgemak.
+          </p>
+
+          <div class="specifications">
+            <h2>Technische Specificaties</h2>
+            <ul>
+              <li><span class="spec-label">Motor</span><span class="spec-value">4.0 liter V8 bi-turbo motor</span></li>
+              <li><span class="spec-label">Vermogen</span><span class="spec-value">600 pk</span></li>
+              <li><span class="spec-label">Acceleratie 0-100</span><span class="spec-value">3,6 seconden</span></li>
+              <li><span class="spec-label">Aandrijving</span><span class="spec-value">Quattro vierwielaandrijving</span></li>
+              <li><span class="spec-label">Interieur</span><span class="spec-value">Ruim interieur met sportieve afwerking</span></li>
+            </ul>
+          </div>
+
+          
+          <div class="product-actions">
+           
+            <button
+              class="btn-cart"
+              data-id="rs6"
+              data-name="Audi RS6"
+              data-price="109000"
+            >
+              🛒 Toevoegen aan winkelwagen
+            </button>
+            <button
+              class="btn-wishlist"
+              data-id="rs6"
+              data-name="Audi RS6"
+              data-price="109000"
+            >
+              ❤️ Toevoegen aan verlanglijstje
+            </button>
+    
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Luxe Rijders - Premium Autohandel</p>
+      <p>&copy; 2025 Luxe Rijders - Premium Autohandel</p>
     </footer>
-</body>
+
+
+  </body>
 </html>

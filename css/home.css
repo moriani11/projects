@@ -1,140 +1,204 @@
-/* Homepage Styles */
 .homepage {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 2rem 1rem; /* mobile-first padding */
-    margin-bottom: 3rem;
-    background-color: var(--dark-gray);
-    border-radius: 8px;
+
+.intro-text {
+  order: 1;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
-.hero h1 {
-    font-size: 2.2rem; /* mobile-first */
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+.intro-text h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--gold);
 }
 
-.hero p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 2rem; 
-    line-height: 1.6;
+.intro-text p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+  line-height: 1.6;
 }
 
-/* CTA Button */
 .cta-button {
-    padding: 1rem 2rem;
-    background-color: var(--gold);
-    color: var(--black);
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    border: 2px solid var(--gold);
+  display: inline-block;
+  width: 200px;
+  padding: 12px 0;
+  text-align: center;
+  background-color: var(--dark-gray);
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: transparent;
-    color: var(--gold);
+  background-color: var(--gold);
+  color: var(--black);
 }
 
-/* Featured Products */
-.featured-products {
-    margin-top: 4rem;
-}
 
-.featured-products h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
+.right-column {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* mobile-first: één kolom */
-    gap: 2rem;
-    padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
+.about-me {
+  order: 3;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: rgba(26, 26, 26, 0.8);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.owner-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+}
+
+.about-content p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #fff;
+  margin: 0;
+}
+
+.about-content strong {
+  color: var(--gold);
+}
+
+
 .product-card {
-    position: relative;
-    height: 300px; /* mobile-first */
-    border-radius: 8px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 440px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--dark-gray);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .audi-rs6 {
-    background-image: url('../assets/audi-rs6/voorkant.jpg');  
+  background-image: url('../assets/audi-rs6/voorkant.jpg');
 }
 
 .mercedes-gt63s {
-    background-image: url('../assets/mercedes-amg-gt63-s/gt63svoorkant.jpg');
+  background-image: url('../assets/mercedes-amg-gt63-s/gt63svoorkant.jpg');
 }
 
 .lamborghini-urus {
-    background-image: url('../assets/lamborghini-urus/urusvoor.jpg');
+  background-image: url('../assets/lamborghini-urus/urusvoor.jpg');
 }
-
-.product-card:hover {
-    transform: translateY(-10px);
-}
-
-.product-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
-} 
 
 .product-info {
-    position: relative; /* nog extra bekijken*/
-    color: white;
-    padding: 2rem;
-    z-index: 1;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 .product-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+  margin: 0 0 0.2rem 0;
+  font-size: 1rem;
+  font-weight: 800;
 }
 
-.product-info p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.5;
+.product-info .details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #555;
+  text-transform: uppercase;
 }
 
-/* Grotere schermen */
-@media (min-width: 769px) {
-    .hero {
-        padding: 4rem 2rem;
-    }
+.product-info .price {
+  font-weight: bold;
+}
 
-    .hero h1 {
-        font-size: 3rem;
-    }
 
+
+@media (min-width: 992px) {
+  .homepage {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem;
+    min-height: 80vh;
+  }
+
+  .left-column {
+    padding-right: 2rem;
+  }
+
+  .intro-text {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .intro-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-text p {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+
+  .about-me {
+    margin-top: 3rem;
+  }
+
+  
     .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 320px 320px;
+    grid-template-areas:
+      "big card2"
+      "big card3";
+    gap: 1.5rem;
+  }
 
-    .product-card {
-        height: 400px;
-    }
+  .product-card
+  {
+    height: 100%;
+  }
+
+  .audi-rs6 { grid-area: big; }
+  .mercedes-gt63s { grid-area: card2; }
+  .lamborghini-urus { grid-area: card3; }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+  }
 }

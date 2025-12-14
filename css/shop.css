@@ -1,71 +1,106 @@
-/* Shop Page Layout */
 .shop-page {
     padding: 2rem 1rem;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
-/* Container */
 .shop-container {
     display: flex;
-    flex-direction: column; /* mobile-first: kolom */
+    flex-direction: column; 
     gap: 2rem;
     max-width: 1400px;
     margin: 0 auto;
 }
 
-/* Products Section */
-.products {
-    flex: 1;
-}
 
 .products h1 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #333;
+    color: var(--white);
 }
 
-/* Product List */
+
 .product-list {
     display: flex;
-    flex-direction: column; /* mobile-first: kolom */
+    flex-direction: column; 
     gap: 2rem;
 }
 
-/* Product Card */
+
 .product-card {
-    display: flex;
-    flex-direction: column; /* mobile-first: alles onder elkaar */
-    background: white;
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
-/* Product Image */
 .product-image {
+    position: relative;
     height: 200px;
+    width: 100%;
     background-size: cover;
     background-position: center;
-    flex-shrink: 0;
 }
 
-/* Product Details */
+
+
+.btn-wishlist-icon,
+.btn-cart-icon {
+    position: absolute;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.btn-wishlist-icon:hover {
+    background-color: #e74c3c;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.btn-cart-icon:hover {
+    background-color: #2c3e50;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.btn-wishlist-icon { right: 10px; }
+.btn-cart-icon { left: 10px; }
+
+
+.rs6 { background-image: url('../assets/audi-rs6/voorkant.jpg'); }
+.rsq8 { background-image: url('../assets/audi-rsq8/rsq8voor.png'); }
+.bmw-m3 { background-image: url('../assets/bmw-m3/m3voorkant.avif'); }
+.bmw-m5cs { background-image: url('../assets/bmw-m5-cs/m5csvoor.jpg'); }
+.gt63s { background-image: url('../assets/mercedes-amg-gt63-s/gt63svoorkant.jpg'); }
+.urus { background-image: url('../assets/lamborghini-urus/urusvoor.jpg'); }
+
+
+
 .product-details {
     padding: 1.5rem;
     display: flex;
-    flex-direction: column; /* alles onder elkaar */
+    flex-direction: column;
 }
 
 .product-details h3 {
     margin: 0 0 0.75rem 0;
-    color: black;
+    color: #000;
     font-size: 1.5rem;
 }
 
@@ -73,43 +108,35 @@
     margin: 0 0 1.5rem 0;
     color: #555;
     line-height: 1.5;
-    flex-grow: 1;
 }
 
-/* Add to Cart Button */
-.add-to-cart {
-    margin-top: 1rem;
-    align-self: flex-start; /* knop onder details */
-    padding: 0.75rem 1.5rem;
-    background-color: #2c3e50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.price {
+    font-size: 1.5rem;
     font-weight: 600;
-    transition: background-color 0.2s;
+    color: #2c3e50;
 }
 
-.add-to-cart:hover {
-    background-color: #1a252f;
-}
 
-/* Sidebar */
+
 .shop-sidebar {
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    order: -1; 
 }
 
-.wishlist, .shopping-cart {
-    background: white;
+.wishlist,
+.shopping-cart {
+    background: #fff;
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
 }
 
-.wishlist h2, .shopping-cart h2 {
+.wishlist h2,
+.shopping-cart h2 {
     margin: 0 0 1rem 0;
     color: #2c3e50;
     font-size: 1.25rem;
@@ -117,42 +144,84 @@
     border-bottom: 1px solid #eee;
 }
 
-.wishlist-content, .cart-content {
+.wishlist-content,
+.cart-content {
     min-height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #777;
 }
 
-/* Background images per product */
-.product-card:nth-child(1) .product-image { background-image: url('../assets/audi-rs6/voorkant.jpg'); }
-.product-card:nth-child(2) .product-image { background-image: url('../assets/audi-rsq8/rsq8voor.png'); }
-.product-card:nth-child(3) .product-image { background-image: url('../assets/bmw-m3/m3voorkant.avif'); }
-.product-card:nth-child(4) .product-image { background-image: url('../assets/bmw-m5-cs/m5csvoor.jpg'); }
-.product-card:nth-child(5) .product-image { background-image: url('../assets/mercedes-amg-gt63-s/gt63svoorkant.jpg'); }
-.product-card:nth-child(6) .product-image { background-image: url('../assets/lamborghini-urus/urusvoor.jpg'); }
+.cart-item span,
+.wishlist-item span {
+    font-size: 1rem;
+    color: #333;
+}
 
-/* Desktop / grotere schermen */
-@media (min-width: 769px) {
-    .shop-container {
-        flex-direction: row; /* sidebar naast producten */
+.cart-totals,
+.wishlist-totals {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    color: #000;
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.cart-item-image,
+.wishlist-item-image {
+    width: 60px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.btn-cart-remove {
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  font-size: 1rem;
+}
+
+
+.cart-item:hover .btn-cart-remove {
+  opacity: 1;
+}
+
+
+@media (min-width: 900px) {
+    .shop-page {
+        padding: 3rem 2rem;
     }
 
-    .product-card {
-        flex-direction: row; /* productdetails naast afbeelding */
+    .shop-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 3fr 1.2fr;
+        gap: 2.5rem;
+        align-items: flex-start;
+    }
+
+    .products h1 {
+        text-align: left;
+    }
+
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2rem;
     }
 
     .product-image {
-        width: 300px;
+        height: 230px;
     }
 
     .shop-sidebar {
-        width: 320px;
-    }
-
-    .add-to-cart {
-        margin-top: 0; /* knop naast content op desktop */
-        align-self: auto;
+        width: 100%;
+        order: 0;
     }
 }

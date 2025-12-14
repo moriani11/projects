@@ -1,15 +1,13 @@
-/* Product Detail Page Styles */
 .product-detail {
     max-width: 100%;
     margin: 2rem auto;
-    padding: 0 1rem; /* mobile-first padding */
+    padding: 0 1rem;
 }
 
-/* Product Hero */
 .product-hero {
     display: grid;
-    grid-template-columns: 1fr; /* mobile-first: één kolom */
-    gap: 2rem; /* mobile-first gap */
+    grid-template-columns: 1fr;
+    gap: 2rem;
     margin-bottom: 3rem;
     align-items: start;
 }
@@ -17,30 +15,39 @@
 
 .product-image-container img {
     width: 100%;
-    height: 300px; /* mobile-first hoogte */
-    object-fit: cover;
+    height: auto;         
+    object-fit: contain;   /* volledige auto tonen binnen de box */
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 1.8rem;
+}
+
+.product-image-container figure {
+    margin: 0 0 1.5rem 0;
 }
 
 .product-image-container figcaption {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    position: static;
+    margin-top: 0.5rem;
+    background: transparent;
+    color: #555;
+    padding: 0;
+    border-radius: 0;
     font-size: 0.9rem;
 }
 
-/* Product Info */
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
 .product-info {
     padding: 2rem 0;
 }
 
 .product-info h1 {
-    font-size: 2rem; /* mobile-first */
+    font-size: 2rem;
     color: #2c3e50;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -53,10 +60,9 @@
     margin-bottom: 2rem;
 }
 
-/* Specifications */
 .specifications {
     background: #f8f9fa;
-    padding: 1.5rem; /* mobile-first */
+    padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 2rem;
 }
@@ -96,12 +102,11 @@
     font-weight: 500;
 }
 
-/* Product Actions */
 .product-actions {
     display: flex;
-    flex-direction: column; /* mobile-first */
+    flex-direction: column;
     gap: 1rem;
-    align-items: stretch; /* mobile-first */
+    align-items: stretch;
 }
 
 .btn-wishlist {
@@ -130,12 +135,22 @@
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
+.btn-cart {
+    padding: 1rem 2rem;
+    background-color:var(--darkblue) ;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
 
 .btn-back:hover {
     background-color: #1a252f;
 }
 
-/* Grotere schermen */
 @media (min-width: 769px) {
     .product-detail {
         padding: 0 2rem;
@@ -150,9 +165,6 @@
         font-size: 2.5rem;
     }
 
-    .product-image-container img {
-        height: 400px;
-    }
 
     .specifications {
         padding: 2rem;

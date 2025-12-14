@@ -27,6 +27,7 @@
   --black: #000000;
   --dark-gray: #1A1A1A;
   --gold: #FFD700;
+  --white : rgb(255,255,255);
 }
 
 body {

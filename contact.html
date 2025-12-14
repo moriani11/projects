@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Auto's</title>
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/contact.css">
+
+    <link rel="stylesheet" 
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/leaflet.js"></script>
 </head>
+
 <body>
     <header class="main-header">
         <div class="logo">
@@ -30,111 +39,132 @@
                 <li id="contact"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div class="search-container">
+            <input type="text" placeholder="">
+            <button type="submit">🔍</button>
+        </div>
     </header>
 
     <main class="contact-page">
+
+        <!-- Titel -->
+        <h1>Neem contact met ons op</h1>
+        <p class="intro-text">
+            Heeft u vragen over een van onze exclusieve voertuigen? Wilt u een proefrit plannen of meer
+            informatie ontvangen? Vul het contactformulier in en wij nemen zo spoedig mogelijk contact met u op.
+        </p>
+
+        <!-- FORMULIER LINKS -->
+        <div class="contact-form-container">
+            <form class="contact-form">
+                <fieldset>
+                    <legend>Contactformulier</legend>
+
+                    <div class="form-group">
+                        <label for="name">Naam *</label>
+                        <input type="text" id="name" name="name" placeholder="Uw volledige naam" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mailadres *</label>
+                        <input type="email" id="email" name="email" placeholder="uw.email@voorbeeld.be" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefoonnummer</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+32 123 45 67 89">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Onderwerp *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Selecteer een onderwerp --</option>
+                            <option value="info">Algemene informatie</option>
+                            <option value="proefrit">Proefrit aanvragen</option>
+                            <option value="offerte">Offerte aanvragen</option>
+                            <option value="onderhoud">Service & Onderhoud</option>
+                            <option value="andere">Andere vraag</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactpersoon">Contactpersoon</label>
+                        <select id="contactpersoon" name="contactpersoon" required>
+                            <option value="">-- Kies wie je wilt contacteren --</option>
+                            <option value="mohamed">Mohamed Riani (Websitebouwer)</option>
+                            <option value="aman">Aman Hussein (Verantwoordelijke webshop)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Bericht *</label>
+                        <textarea id="message" name="message" rows="6"
+                            placeholder="Typ hier uw bericht..." required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="newsletter">
+                            Ik wil graag de nieuwsbrief ontvangen met exclusieve aanbiedingen
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="privacy" required>
+                            Ik ga akkoord met de
+                            <a href="https://policies.google.com/privacy?hl=nl">privacy voorwaarden</a> *
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Verstuur bericht</button>
+                    <p class="form-note">* Verplichte velden</p>
+                </fieldset>
+            </form>
+        </div>
+
+        
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+        
         <div class="contact-container">
             <div class="contact-info">
-                <h1>Neem contact met ons op</h1>
-                <p class="intro-text">
-                    Heeft u vragen over een van onze exclusieve voertuigen? Wilt u een proefrit plannen of meer informatie ontvangen? Vul het contactformulier in en wij nemen zo spoedig mogelijk contact met u op.
-                </p>
-                
                 <div class="contact-details">
+
                     <h2>Contactgegevens</h2>
+
                     <div class="detail-item">
                         <strong>📍 Adres:</strong>
                         <p>Luxe Rijders Showroom<br>Autostraat 123<br>1000 Brussel, België</p>
                     </div>
+
                     <div class="detail-item">
                         <strong>📞 Telefoon:</strong>
                         <p>+32 2 123 45 67</p>
                     </div>
+
                     <div class="detail-item">
                         <strong>✉️ E-mail:</strong>
                         <p>info@luxerijders.be</p>
                     </div>
+
                     <div class="detail-item">
                         <strong>🕒 Openingsuren:</strong>
                         <p>Ma - Vr: 09:00 - 18:00<br>Za: 10:00 - 17:00<br>Zo: Gesloten</p>
                     </div>
+
                 </div>
             </div>
-
-            <div class="contact-form-container">
-                <form class="contact-form">
-                    <fieldset>
-                        <legend>Contactformulier</legend>
-                        
-                        <div class="form-group">
-                            <label for="name">Naam *</label>
-                            <input type="text" id="name" name="name" placeholder="Uw volledige naam" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">E-mailadres *</label>
-                            <input type="email" id="email" name="email" placeholder="uw.email@voorbeeld.be" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Telefoonnummer</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+32 123 45 67 89">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Onderwerp *</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Selecteer een onderwerp</option>
-                                <option value="info">Algemene informatie</option>
-                                <option value="proefrit">Proefrit aanvragen</option>
-                                <option value="offerte">Offerte aanvragen</option>
-                                <option value="onderhoud">Service & Onderhoud</option>
-                                <option value="andere">Andere vraag</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="car">Geïnteresseerd in</label>
-                            <select id="car" name="car">
-                                <option value="">Selecteer een auto (optioneel)</option>
-                                <option value="audi-rs6">Audi RS6</option>
-                                <option value="audi-rsq8">Audi RS Q8</option>
-                                <option value="bmw-m3">BMW M3</option>
-                                <option value="bmw-m5cs">BMW M5 CS</option>
-                                <option value="mercedes-gt63s">Mercedes-AMG GT 63 S</option>
-                                <option value="lamborghini-urus">Lamborghini Urus</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Bericht *</label>
-                            <textarea id="message" name="message" rows="6" placeholder="Typ hier uw bericht..." required></textarea>
-                        </div>
-
-                        <div class="form-group checkbox-group">
-                            <label>
-                                <input type="checkbox" name="newsletter" id="newsletter">
-                                Ik wil graag de nieuwsbrief ontvangen met exclusieve aanbiedingen
-                            </label>
-                        </div>
-
-                        <div class="form-group checkbox-group">
-                            <label>
-                                <input type="checkbox" name="privacy" id="privacy" required>
-                                Ik ga akkoord met de <a href="#"> privacyvoorwaarden</a> *
-                            </label>
-                        </div>
-
-                        <button type="submit" class="submit-btn">Verstuur bericht</button>
-                        <p class="form-note">* Verplichte velden</p>
-                    </fieldset>
-                </form>
-            </div>
         </div>
+
     </main>
 
     <footer>
         <p>&copy; 2025 Luxe Rijders - Premium Autohandel</p>
     </footer>
+
 </body>
+
 </html>
