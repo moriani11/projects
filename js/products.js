@@ -24,7 +24,7 @@ function renderProducts() {
     productList.appendChild(article);
   });
 
-  setupButtons();
+  setupButtons();  
 }
 
 
